@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YoeAI Platform — Unleash Next-Gen AI Intelligence for Everyone</title>
+<meta name="description" content="YoeAI delivers cutting-edge artificial intelligence solutions. Explore advanced AI tools, insights, and resources to transform your business today.">
+<meta name="keywords" content="AI platform, artificial intelligence, machine learning, AI tools, deep learning, neural networks, AI solutions">
+<meta property="og:title" content="YoeAI Platform — Unleash Next-Gen AI Intelligence for Everyone">
+<meta property="og:description" content="YoeAI delivers cutting-edge artificial intelligence solutions. Explore advanced AI tools, insights, and resources to transform your business today.">
+<meta property="og:url" content="https://yoeai.com">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://yoeai.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Google AdSense - Replace ca-pub-XXXXXXXXXXXXXXXX with your Publisher ID -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<!-- YouTube Channel Monetization - Replace UC_CHANNEL_ID with your channel -->
+<meta name="youtube-channel" content="UC_CHANNEL_ID">
+<!-- Google AdSense - Replace YOUR_PUBLISHER_ID with your actual ID e.g. ca-pub-6620975821265271 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_PUBLISHER_ID" crossorigin="anonymous"></script>
+<!-- YouTube Channel -->
+<meta name="youtube-channel" content="YOUR_YOUTUBE_CHANNEL_ID">
+<link rel="canonical" href="https://yoeai.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #050810;
+  --bg2: #080d1a;
+  --bg3: #0d1428;
+  --accent: #00f5c4;
+  --accent2: #7c3aed;
+  --accent3: #f59e0b;
+  --text: #e2e8f7;
+  --muted: #6b7a99;
+  --card: rgba(255,255,255,0.03);
+  --border: rgba(255,255,255,0.06);
+  --border2: rgba(0,245,196,0.2);
+  --font: 'Space Grotesk', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden}
+
+/* GRID BACKGROUND */
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,245,196,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,196,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(5,8,16,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--mono);font-size:1.1rem;font-weight:600;color:var(--accent);text-decoration:none;letter-spacing:-0.5px}
+.nav-logo span{color:var(--muted)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.2s;letter-spacing:0.3px}
+.nav-links a:hover{color:var(--accent)}
+.nav-actions{display:flex;gap:0.75rem;align-items:center}
+.btn-nav{background:var(--accent);color:var(--bg);padding:0.45rem 1.25rem;border-radius:6px;font-weight:600;font-size:0.82rem;text-decoration:none;font-family:var(--mono);transition:opacity 0.2s;border:none;cursor:pointer}
+.btn-nav:hover{opacity:0.85}
+.btn-nav-ghost{background:transparent;color:var(--accent);padding:0.45rem 1.25rem;border-radius:6px;font-weight:600;font-size:0.82rem;text-decoration:none;font-family:var(--mono);border:1px solid var(--border2);transition:background 0.2s;cursor:pointer}
+.btn-nav-ghost:hover{background:rgba(0,245,196,0.08)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 5rem;position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(0,245,196,0.08);border:1px solid rgba(0,245,196,0.2);color:var(--accent);padding:0.35rem 1rem;border-radius:100px;font-size:0.75rem;font-weight:600;font-family:var(--mono);margin-bottom:2rem;letter-spacing:1px;animation:fadeUp 0.5s ease both}
+.hero-eyebrow::before{content:'●';font-size:6px;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero h1{font-size:clamp(3rem,8vw,6.5rem);font-weight:700;line-height:1;letter-spacing:-3px;animation:fadeUp 0.5s 0.1s ease both;margin-bottom:0.25rem}
+.hero h1 .accent{color:var(--accent);display:block}
+.hero h1 .dim{color:var(--muted)}
+.hero-sub{max-width:560px;color:var(--muted);font-size:1.05rem;margin:1.5rem auto 2.5rem;animation:fadeUp 0.5s 0.2s ease both;line-height:1.7;font-weight:300}
+.hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeUp 0.5s 0.3s ease both}
+.btn-primary{background:var(--accent);color:var(--bg);padding:0.9rem 2.25rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95rem;font-family:var(--mono);transition:transform 0.15s,opacity 0.15s;border:none;cursor:pointer;display:inline-block}
+.btn-primary:hover{transform:translateY(-2px);opacity:0.9}
+.btn-ghost{background:transparent;color:var(--text);padding:0.9rem 2.25rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.95rem;border:1px solid var(--border);transition:border-color 0.2s,background 0.2s;display:inline-block;cursor:pointer}
+.btn-ghost:hover{border-color:var(--border2);background:rgba(0,245,196,0.04)}
+
+/* TICKER */
+.ticker-wrap{background:rgba(0,245,196,0.05);border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);padding:0.75rem 0;overflow:hidden;position:relative;z-index:1}
+.ticker{display:flex;gap:3rem;white-space:nowrap;animation:ticker 30s linear infinite;font-family:var(--mono);font-size:0.78rem;color:var(--muted)}
+.ticker span{color:var(--accent)}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* STATS */
+.stats-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0;max-width:900px;margin:3rem auto 0;border:1px solid var(--border);border-radius:12px;overflow:hidden;animation:fadeUp 0.5s 0.4s ease both;position:relative;z-index:1}
+.stat-item{padding:1.5rem;text-align:center;border-right:1px solid var(--border);position:relative}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:var(--mono);font-size:2rem;font-weight:600;color:var(--accent);display:block}
+.stat-label{font-size:0.75rem;color:var(--muted);margin-top:4px;letter-spacing:0.5px}
+
+/* SECTIONS */
+.section{padding:5rem 2rem;max-width:1140px;margin:0 auto;position:relative;z-index:1}
+.section-label{font-family:var(--mono);font-size:0.7rem;letter-spacing:3px;color:var(--accent);font-weight:600;margin-bottom:0.75rem;text-transform:uppercase}
+.section-title{font-size:clamp(1.8rem,4vw,3rem);font-weight:700;letter-spacing:-1.5px;margin-bottom:1rem;line-height:1.1}
+.section-sub{color:var(--muted);font-size:1rem;max-width:520px;font-weight:300;line-height:1.7}
+
+/* AD BILLBOARD */
+.billboard{background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(0,245,196,0.08));border:1px solid rgba(124,58,237,0.3);border-radius:16px;padding:2rem;margin:2rem 0;position:relative;overflow:hidden;z-index:1}
+.billboard::before{content:'SPONSORED';position:absolute;top:12px;right:16px;font-family:var(--mono);font-size:0.6rem;letter-spacing:2px;color:var(--muted);font-weight:600}
+.billboard-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.billboard-badge{background:rgba(124,58,237,0.2);border:1px solid rgba(124,58,237,0.4);color:#a78bfa;padding:0.25rem 0.75rem;border-radius:4px;font-size:0.7rem;font-family:var(--mono);font-weight:600;letter-spacing:1px;margin-bottom:0.5rem;display:inline-block}
+.billboard h3{font-size:1.1rem;font-weight:600;margin-bottom:0.25rem}
+.billboard p{color:var(--muted);font-size:0.88rem}
+.billboard-cta{background:var(--accent2);color:#fff;padding:0.65rem 1.5rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.85rem;white-space:nowrap;font-family:var(--mono);transition:opacity 0.2s}
+.billboard-cta:hover{opacity:0.85}
+
+/* CONTENT GRID */
+.content-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;margin-top:2.5rem}
+.content-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color 0.2s,transform 0.2s;text-decoration:none;color:var(--text);display:block}
+.content-card:hover{border-color:var(--border2);transform:translateY(-4px)}
+.card-thumb{height:160px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:var(--bg3);position:relative;overflow:hidden}
+.card-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,var(--bg3))}
+.card-body{padding:1.25rem}
+.card-tag{font-family:var(--mono);font-size:0.65rem;letter-spacing:2px;color:var(--accent);font-weight:600;margin-bottom:0.5rem;text-transform:uppercase}
+.card-body h3{font-size:0.95rem;font-weight:600;margin-bottom:0.5rem;line-height:1.4}
+.card-body p{font-size:0.82rem;color:var(--muted);line-height:1.6}
+.card-footer{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1.25rem;border-top:1px solid var(--border);font-size:0.75rem;color:var(--muted);font-family:var(--mono)}
+
+/* YOUTUBE SECTION */
+.youtube-section{background:var(--bg2);border-radius:20px;padding:3rem;margin:3rem 0;border:1px solid var(--border)}
+.yt-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem;align-items:center}
+.yt-embed{border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:var(--bg3);border:1px solid var(--border);position:relative}
+.yt-embed iframe{width:100%;height:100%;border:none}
+.yt-playlist{display:flex;flex-direction:column;gap:0.75rem}
+.yt-item{display:flex;gap:1rem;align-items:center;padding:0.75rem;border-radius:10px;background:var(--card);border:1px solid var(--border);cursor:pointer;transition:border-color 0.2s;text-decoration:none;color:var(--text)}
+.yt-item:hover{border-color:var(--border2)}
+.yt-thumb{width:80px;height:50px;border-radius:6px;background:var(--bg3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.yt-info h4{font-size:0.82rem;font-weight:600;margin-bottom:3px;line-height:1.3}
+.yt-info span{font-size:0.72rem;color:var(--muted);font-family:var(--mono)}
+
+/* LEAD GEN */
+.lead-section{background:linear-gradient(135deg,var(--bg3),var(--bg2));border:1px solid var(--border2);border-radius:20px;padding:3.5rem;text-align:center;position:relative;overflow:hidden}
+.lead-section::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(0,245,196,0.08) 0%,transparent 70%);pointer-events:none}
+.lead-badge{display:inline-block;background:rgba(0,245,196,0.1);border:1px solid rgba(0,245,196,0.25);color:var(--accent);padding:0.3rem 0.9rem;border-radius:100px;font-size:0.72rem;font-family:var(--mono);font-weight:600;letter-spacing:1px;margin-bottom:1.5rem}
+.lead-section h2{font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:700;letter-spacing:-1px;margin-bottom:0.75rem}
+.lead-section p{color:var(--muted);max-width:500px;margin:0 auto 2rem;font-weight:300}
+.lead-form{display:flex;gap:0.75rem;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.lead-input{flex:1;min-width:220px;padding:0.9rem 1.25rem;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:0.95rem;font-family:var(--font);outline:none;transition:border-color 0.2s}
+.lead-input:focus{border-color:var(--accent)}
+.lead-input::placeholder{color:var(--muted)}
+.lead-magnet{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2rem;text-align:left}
+.magnet-item{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;padding:1rem;display:flex;gap:0.75rem;align-items:flex-start}
+.magnet-icon{font-size:1.4rem;flex-shrink:0}
+.magnet-item h4{font-size:0.85rem;font-weight:600;margin-bottom:3px}
+.magnet-item p{font-size:0.75rem;color:var(--muted)}
+.form-success{display:none;color:var(--accent);font-weight:600;margin-top:1rem;font-family:var(--mono);font-size:0.9rem}
+
+/* SPONSOR PACKAGES */
+.sponsor-section{background:var(--bg2);border-radius:20px;padding:3rem;border:1px solid var(--border);margin:3rem 0}
+.sponsor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem}
+.sponsor-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;gap:0.5rem;transition:border-color 0.2s,transform 0.2s;position:relative}
+.sponsor-card:hover{border-color:rgba(245,158,11,0.4);transform:translateY(-3px)}
+.sponsor-card.featured{border-color:rgba(245,158,11,0.35);background:rgba(245,158,11,0.04)}
+.sponsor-tier{font-family:var(--mono);font-size:0.65rem;letter-spacing:2px;color:var(--accent3);font-weight:600;text-transform:uppercase}
+.sponsor-card h4{font-size:1rem;font-weight:700}
+.sponsor-price{font-family:var(--mono);font-size:1.6rem;font-weight:700;color:var(--accent);margin:0.25rem 0}
+.sponsor-price span{font-size:0.75rem;color:var(--muted);font-weight:400}
+.sponsor-features{list-style:none;font-size:0.8rem;color:var(--muted);display:flex;flex-direction:column;gap:5px;margin:0.5rem 0}
+.sponsor-features li::before{content:'→ ';color:var(--accent);font-family:var(--mono)}
+.btn-sponsor{background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:var(--accent3);padding:0.55rem 1rem;border-radius:6px;font-size:0.8rem;font-weight:600;cursor:pointer;font-family:var(--mono);text-decoration:none;display:inline-block;margin-top:0.5rem;transition:background 0.2s;text-align:center}
+.btn-sponsor:hover{background:rgba(245,158,11,0.2)}
+.featured-badge{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--accent3);color:var(--bg);padding:0.2rem 0.75rem;border-radius:100px;font-size:0.65rem;font-family:var(--mono);font-weight:700;letter-spacing:1px;white-space:nowrap}
+
+/* DOMAIN ACQUISITION */
+.domain-section{background:linear-gradient(135deg,rgba(124,58,237,0.12),rgba(0,245,196,0.06));border:1px solid rgba(124,58,237,0.25);border-radius:20px;padding:3rem;margin:3rem 0;position:relative;overflow:hidden}
+.domain-section::after{content:'yoeai.com';position:absolute;right:-30px;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:4.5rem;font-weight:700;color:rgba(255,255,255,0.02);white-space:nowrap;pointer-events:none;letter-spacing:-2px}
+.domain-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.domain-info h2{font-size:2rem;font-weight:700;letter-spacing:-1px;margin-bottom:0.75rem}
+.domain-info p{color:var(--muted);font-weight:300;margin-bottom:2rem;line-height:1.7}
+.domain-price{font-family:var(--mono);font-size:3.5rem;font-weight:700;color:var(--accent);line-height:1;margin-bottom:0.25rem}
+.domain-price-sub{font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem;font-family:var(--mono)}
+.domain-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.domain-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.domain-stat{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-align:center}
+.domain-stat .num{font-family:var(--mono);font-size:1.5rem;font-weight:700;color:var(--accent);display:block}
+.domain-stat .lbl{font-size:0.72rem;color:var(--muted);margin-top:4px;letter-spacing:0.5px}
+.domain-features{display:flex;flex-direction:column;gap:0.75rem;margin-top:1.5rem}
+.domain-feat{display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--muted)}
+.domain-feat::before{content:'✓';color:var(--accent);font-weight:700;font-family:var(--mono);flex-shrink:0}
+
+/* TOOLS/AFFILIATE */
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:2rem}
+.tool-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color 0.2s;text-decoration:none;color:var(--text)}
+.tool-card:hover{border-color:rgba(124,58,237,0.4)}
+.tool-icon{width:42px;height:42px;border-radius:10px;background:rgba(124,58,237,0.15);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.tool-info h4{font-size:0.9rem;font-weight:600;margin-bottom:3px}
+.tool-info p{font-size:0.78rem;color:var(--muted);line-height:1.5}
+.tool-commission{font-size:0.7rem;color:var(--accent);font-weight:600;margin-top:5px;font-family:var(--mono)}
+
+/* NETWORK BAR */
+.network-bar{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin:2rem 0}
+.network-info h3{font-size:1rem;font-weight:600;margin-bottom:3px}
+.network-info p{font-size:0.82rem;color:var(--muted)}
+.network-stats{display:flex;gap:2rem;flex-wrap:wrap}
+.net-stat{text-align:center}
+.net-stat .n{font-family:var(--mono);font-size:1.3rem;font-weight:700;color:var(--accent);display:block}
+.net-stat .l{font-size:0.7rem;color:var(--muted)}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2rem;position:relative;z-index:1}
+.footer-inner{max-width:1140px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
+.footer-brand .logo{font-family:var(--mono);font-size:1.1rem;font-weight:600;color:var(--accent);text-decoration:none}
+.footer-brand p{color:var(--muted);font-size:0.82rem;margin-top:0.75rem;line-height:1.6;max-width:250px}
+.footer-col h4{font-size:0.8rem;font-weight:600;margin-bottom:1rem;color:var(--text);letter-spacing:0.5px;font-family:var(--mono)}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.footer-col ul a{color:var(--muted);text-decoration:none;font-size:0.82rem;transition:color 0.2s}
+.footer-col ul a:hover{color:var(--accent)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{color:var(--muted);font-size:0.78rem;font-family:var(--mono)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:0.78rem;transition:color 0.2s;font-family:var(--mono)}
+.footer-links a:hover{color:var(--accent)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:1rem}
+  .nav-links,.footer-top{display:none}
+  .hero h1{letter-spacing:-2px}
+  .yt-grid,.domain-grid{grid-template-columns:1fr}
+  .domain-section::after{display:none}
+  .stats-bar{grid-template-columns:1fr 1fr}
+  .stat-item{border-right:none;border-bottom:1px solid var(--border)}
+  .footer-top{grid-template-columns:1fr}
+}
+</style>
+
+  <!-- ═══ SEO: Open Graph ═══ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yoeai.com/">
+  <meta property="og:title" content="YoeAI Platform — Unleash Next-Gen AI Intelligence for Everyone">
+  <meta property="og:description" content="YoeAI delivers cutting-edge artificial intelligence solutions. Explore advanced AI tools, insights, and resources to transform your business today.">
+  <meta property="og:image" content="https://yoeai.com/og-image.jpg">
+  <meta property="og:site_name" content="YoeAI Platform">
+  <meta property="og:locale" content="en_US">
+
+  <!-- ═══ SEO: Twitter Cards ═══ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@yoeai">
+  <meta name="twitter:title" content="YoeAI Platform — Unleash Next-Gen AI Intelligence for Everyone">
+  <meta name="twitter:description" content="YoeAI delivers cutting-edge artificial intelligence solutions. Explore advanced AI tools, insights, and resources to transform your business today.">
+  <meta name="twitter:image" content="https://yoeai.com/og-image.jpg">
+
+  <!-- ═══ SEO: Additional Meta ═══ -->
+  <meta name="author" content="YoeAI Platform — Webworks Media Network">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="theme-color" content="#04070f">
+  <link rel="canonical" href="https://yoeai.com/">
+
+  <!-- ═══ Security Headers ═══ -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- ═══ Schema.org JSON-LD ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "YoeAI Platform",
+    "url": "https://yoeai.com",
+    "description": "YoeAI delivers cutting-edge artificial intelligence solutions. Explore advanced AI tools, insights, and resources to transform your business today.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "YoeAI Platform",
+      "url": "https://yoeai.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://yoeai.com/logo.png"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://yoeai.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- ═══ Google Analytics 4 ═══ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      page_title: 'YoeAI Platform',
+      page_location: 'https://yoeai.com/'
+    });
+  </script>
+
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">yoeai<span>.com</span></a>
+  <ul class="nav-links">
+    <li><a href="#insights">Insights</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#sponsors">Advertise</a></li>
+    <li><a href="#acquire">Acquire</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="#acquire" class="btn-nav-ghost">Buy Domain</a>
+    <a href="#newsletter" class="btn-nav">Get Access</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- 50/50 BILLBOARD — YouTube + Sponsor CTA       -->
+<!-- ══════════════════════════════════════════════ -->
+<style>
+.billboard{display:grid;grid-template-columns:1fr 1fr;min-height:520px;position:relative;overflow:hidden;background:#020617;border-bottom:1px solid rgba(255,255,255,0.07)}
+.bb-left{position:relative;background:#000;overflow:hidden}
+.bb-left::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,245,196,0.08) 0%,transparent 70%);pointer-events:none;z-index:1;animation:bbGlow 4s ease-in-out infinite}
+@keyframes bbGlow{0%,100%{opacity:0.6}50%{opacity:1}}
+.yt-wrapper{position:relative;width:100%;height:100%;min-height:520px}
+.yt-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:none;z-index:2}
+.yt-loading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#020617;z-index:1;gap:1rem}
+.yt-spinner{width:40px;height:40px;border:3px solid rgba(255,255,255,0.07);border-top-color:#00f5c4;border-radius:50%;animation:spin 0.8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.yt-loading p{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#6b7a99;letter-spacing:2px}
+.live-badge{position:absolute;top:16px;left:16px;background:#ef4444;color:#fff;padding:0.25rem 0.75rem;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:0.65rem;font-weight:600;letter-spacing:2px;z-index:10;display:flex;align-items:center;gap:6px;box-shadow:0 0 20px rgba(239,68,68,0.5);animation:livePulse 2s ease-in-out infinite}
+@keyframes livePulse{0%,100%{box-shadow:0 0 20px rgba(239,68,68,0.5)}50%{box-shadow:0 0 40px rgba(239,68,68,0.8)}}
+.live-dot{width:7px;height:7px;background:#fff;border-radius:50%;animation:dotBlink 1s ease-in-out infinite}
+@keyframes dotBlink{0%,100%{opacity:1}50%{opacity:0.3}}
+.bb-divider{position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,#00f5c4,#f5a623,transparent);opacity:0.3;z-index:5}
+.bb-right{position:relative;background:#020617;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 2.5rem;text-align:center;overflow:hidden}
+.bb-right::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(245,166,35,0.12) 0%,transparent 70%);pointer-events:none;animation:goldPulse 3s ease-in-out infinite}
+@keyframes goldPulse{0%,100%{transform:scale(1);opacity:0.8}50%{transform:scale(1.1);opacity:1}}
+.bb-right::after{content:'';position:absolute;bottom:-100px;left:-100px;width:300px;height:300px;background:radial-gradient(circle,rgba(0,245,196,0.08) 0%,transparent 70%);pointer-events:none}
+.megaphone-wrap{position:relative;margin-bottom:1.5rem}
+.megaphone-icon{font-size:4rem;display:block;animation:wobble 2s ease-in-out infinite;filter:drop-shadow(0 0 20px rgba(245,166,35,0.6))}
+@keyframes wobble{0%,100%{transform:rotate(-5deg) scale(1)}25%{transform:rotate(5deg) scale(1.05)}50%{transform:rotate(-3deg) scale(0.98)}75%{transform:rotate(4deg) scale(1.03)}}
+.megaphone-halo{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;height:80px;background:radial-gradient(circle,rgba(245,166,35,0.3) 0%,transparent 70%);border-radius:50%;animation:haloExpand 2s ease-in-out infinite}
+@keyframes haloExpand{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:0.8}50%{transform:translate(-50%,-50%) scale(1.5);opacity:0.4}}
+.sponsor-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:3px;color:#f5a623;text-transform:uppercase;margin-bottom:0.75rem;display:flex;align-items:center;gap:8px}
+.sponsor-tag::before,.sponsor-tag::after{content:'';height:1px;width:20px;background:#f5a623;opacity:0.5}
+.sponsor-headline{font-family:'Syne',sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:900;line-height:1.1;text-transform:uppercase;letter-spacing:-0.5px;margin-bottom:1rem;color:#e8ecf8}
+.sponsor-headline .hl{background:linear-gradient(90deg,#f5a623,#ffcc44);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sponsor-stats{display:flex;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap;justify-content:center}
+.sp-stat .n{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:900;color:#00f5c4;display:block}
+.sp-stat .l{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:#6b7a99;letter-spacing:1px}
+.btn-secure{position:relative;background:linear-gradient(135deg,#f5a623,#e8920a);color:#000;padding:1rem 2rem;border-radius:8px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:900;letter-spacing:0.5px;text-decoration:none;text-transform:uppercase;border:none;cursor:pointer;display:inline-block;box-shadow:0 0 30px rgba(245,166,35,0.5),0 0 60px rgba(245,166,35,0.25);animation:secureGlow 3s ease-in-out infinite;transition:transform 0.2s;width:100%;max-width:300px;margin-bottom:0.75rem;overflow:hidden;text-align:center}
+.btn-secure::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transform:translateX(-100%);animation:secureShimmer 2s infinite}
+@keyframes secureShimmer{to{transform:translateX(100%)}}
+@keyframes secureGlow{0%,100%{box-shadow:0 0 30px rgba(245,166,35,0.5),0 0 60px rgba(245,166,35,0.25)}50%{box-shadow:0 0 50px rgba(245,166,35,0.8),0 0 100px rgba(245,166,35,0.4)}}
+.btn-secure:hover{transform:translateY(-2px) scale(1.01)}
+.bb-adsense{width:100%;max-width:300px;min-height:50px}
+.spots-left{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#6b7a99;margin-top:0.5rem;display:flex;align-items:center;gap:6px}
+.spots-left::before{content:'';width:6px;height:6px;background:#ef4444;border-radius:50%;animation:dotBlink 1s infinite;flex-shrink:0}
+@media(max-width:768px){
+  .billboard{grid-template-columns:1fr}
+  .bb-left{min-height:220px}
+  .yt-wrapper{min-height:220px}
+  .bb-divider{display:none}
+  .bb-right{padding:2rem 1.5rem}
+}
+</style>
+
+<div class="billboard">
+  <!-- LEFT: YouTube Latest Video -->
+  <div class="bb-left">
+    <div class="live-badge"><div class="live-dot"></div>LATEST VIDEO</div>
+    <div class="yt-wrapper">
+      <div class="yt-loading" id="ytLoading">
+        <div class="yt-spinner"></div>
+        <p>LOADING LATEST VIDEO</p>
+      </div>
+      <div id="ytPlayer"></div>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="bb-divider"></div>
+
+  <!-- RIGHT: Sponsor CTA -->
+  <div class="bb-right">
+    <div class="megaphone-wrap">
+      <div class="megaphone-halo"></div>
+      <span class="megaphone-icon">📢</span>
+    </div>
+    <div class="sponsor-tag">Premium Advertising</div>
+    <h2 class="sponsor-headline">Your Brand.<br><span class="hl">Their Attention.</span><br>Right Now.</h2>
+    <div class="sponsor-stats">
+      <div class="sp-stat"><span class="n">45K+</span><span class="l">Subscribers</span></div>
+      <div class="sp-stat"><span class="n">94%</span><span class="l">Target Match</span></div>
+      <div class="sp-stat"><span class="n">$12</span><span class="l">CPM Rate</span></div>
+    </div>
+    <a href="acquisition.html" class="btn-secure">🔥 Secure This Spot Now</a>
+    <div class="bb-adsense">
+      <ins class="adsbygoogle" style="display:block;width:100%;min-height:50px" data-ad-client="ca-pub-6620975821265271" data-ad-slot="YOUR_AD_SLOT" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
+    <div class="spots-left">Only 2 sponsor slots remaining this month</div>
+  </div>
+</div>
+
+<script>
+// YouTube Latest Video Loader
+(function(){
+  var apiKey = 'AIzaSyBVoWllpCQ7Bh-GZuHblnipZYZLiJA7duQ';
+  var channelId = 'UCeJ-0a2SZGZDUXpIX-lCfRg';
+  function loadYT(){
+    fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId='+channelId+'&type=video&order=date&maxResults=1&key='+apiKey)
+    .then(function(r){return r.json()})
+    .then(function(data){
+      var loading = document.getElementById('ytLoading');
+      var player = document.getElementById('ytPlayer');
+      if(loading) loading.style.display='none';
+      if(data.items && data.items.length > 0){
+        var vid = data.items[0].id.videoId;
+        if(player) player.innerHTML='<iframe src="https://www.youtube.com/embed/'+vid+'?autoplay=1&mute=1&rel=0&loop=1&playlist='+vid+'&modestbranding=1" allow="autoplay;encrypted-media;picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:none;z-index:2"></iframe>';
+      }
+    })
+    .catch(function(){
+      var loading = document.getElementById('ytLoading');
+      var player = document.getElementById('ytPlayer');
+      if(loading) loading.style.display='none';
+      if(player) player.innerHTML='<iframe src="https://www.youtube.com/embed?listType=user_uploads&list='+channelId+'&autoplay=1&mute=1" allow="autoplay;encrypted-media" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:none;z-index:2"></iframe>';
+    });
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',loadYT);
+  } else { loadYT(); }
+  try{(adsbygoogle=window.adsbygoogle||[]).push({})}catch(e){}
+})();
+</script>
+
+<div class="hero">
+  <div class="hero-eyebrow">🤖 NEXT-GEN AI INTELLIGENCE</div>
+  <h1>
+    Intelligent AI Solutions
+    <span class="accent">Powered by Innovation</span>
+    <span class="dim">Built for Tomorrow</span>
+  </h1>
+  <p class="hero-sub">YoeAI brings enterprise-grade artificial intelligence to businesses of all sizes. Transform workflows, automate decisions, and unlock unprecedented growth with our AI platform.</p>
+  <div class="hero-cta">
+    <a href="#newsletter" class="btn-primary">Explore AI Tools</a>
+    <a href="#insights" class="btn-ghost">Watch Demo</a>
+  </div>
+  <div class="stats-bar">
+    <div class="stat-item"><span class="stat-num">50K+</span><span class="stat-label">AI Models Deployed</span></div>
+    <div class="stat-item"><span class="stat-num">99.7%</span><span class="stat-label">Accuracy Rate</span></div>
+    <div class="stat-item"><span class="stat-num">180+</span><span class="stat-label">Countries Served</span></div>
+    <div class="stat-item"><span class="stat-num">$2.1B</span><span class="stat-label">Client Value Generated</span></div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>YoeAI launches revolutionary GPT-5 integration for enterprise clients</span> · <span>AI automation reduces operational costs by 67% — new case study</span> · <span>Machine learning breakthrough: Real-time predictive analytics now available</span> · <span>Fortune 500 companies adopting YoeAI at record pace</span> · <span>New neural network architecture achieves human-level reasoning</span> · <span>AI regulation updates: What businesses need to know in 2025</span> · <span>YoeAI launches revolutionary GPT-5 integration for enterprise clients</span> · <span>AI automation reduces operational costs by 67% — new case study</span> · <span>Machine learning breakthrough: Real-time predictive analytics now available</span> · <span>Fortune 500 companies adopting YoeAI at record pace</span> · <span>New neural network architecture achieves human-level reasoning</span> · <span>AI regulation updates: What businesses need to know in 2025</span>
+  </div>
+</div>
+
+<!-- SPONSOR BILLBOARD (Ad Unit) -->
+<div class="section" style="padding-bottom:0">
+  <div class="billboard">
+    <div class="billboard-inner">
+      <div>
+        <div class="billboard-badge">PARTNER</div>
+        <h3>Scale Your AI Infrastructure</h3>
+        <p>Trusted by 10,000+ developers worldwide</p>
+      </div>
+      <a href="https://openai.com" class="billboard-cta" target="_blank" rel="noopener">Start Free Trial →</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- IN-ARTICLE AD UNIT (activates after AdSense approval) -->
+<div style="max-width:1140px;margin:1.5rem auto;padding:0 2rem;position:relative;z-index:1;">
+  <ins class="adsbygoogle"
+       style="display:block;text-align:center;min-height:90px;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="YOUR_PUBLISHER_ID"
+       data-ad-slot="YOUR_AD_SLOT_1"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- CONTENT / INSIGHTS -->
+<section class="section" id="insights">
+  <div class="section-label">AI INSIGHTS</div>
+  <h2 class="section-title">Latest in Artificial Intelligence</h2>
+  <p class="section-sub">Expert analysis, tutorials, and breakthrough discoveries in AI technology</p>
+  <div class="content-grid">
+    <a href="#" class="content-card">
+      <div class="card-thumb" style="background:#0a1628">🧠</div>
+      <div class="card-body">
+        <div class="card-tag">DEEP LEARNING</div>
+        <h3>7 Neural Network Architectures Dominating 2025</h3>
+        <p>Explore the most powerful neural network designs reshaping industries from healthcare to finance.</p>
+      </div>
+      <div class="card-footer"><span>8 min read</span><span>24.5K views</span></div>
+    </a>
+    <a href="#" class="content-card">
+      <div class="card-thumb" style="background:#0d1020">⚡</div>
+      <div class="card-body">
+        <div class="card-tag">AUTOMATION</div>
+        <h3>Building AI Agents That Actually Work</h3>
+        <p>Step-by-step guide to creating autonomous AI systems that deliver measurable business results.</p>
+      </div>
+      <div class="card-footer"><span>12 min read</span><span>18.2K views</span></div>
+    </a>
+    <a href="#" class="content-card">
+      <div class="card-thumb" style="background:#0a1a12">🔮</div>
+      <div class="card-body">
+        <div class="card-tag">FUTURE TECH</div>
+        <h3>AGI Timeline: Expert Predictions Revealed</h3>
+        <p>Leading researchers share their forecasts on when artificial general intelligence becomes reality.</p>
+      </div>
+      <div class="card-footer"><span>6 min read</span><span>31.8K views</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- YOUTUBE / VIDEO -->
+<section class="section" id="videos">
+  <div class="youtube-section">
+    <div class="section-label">VIDEO TUTORIALS</div>
+    <h2 class="section-title">Master AI Development</h2>
+    <div class="yt-grid">
+      <div class="yt-embed">
+        <iframe src="https://www.youtube.com/embed/EdotalwAmYA?autoplay=1&mute=1&rel=0&loop=1&playlist=EdotalwAmYA" allowfullscreen allow="autoplay; encrypted-media" loading="lazy"></iframe>
+      </div>
+      <div class="yt-playlist">
+        <a href="https://www.youtube.com/watch?v=JSrb7bXaG7M" class="yt-item" target="_blank" rel="noopener">
+          <div class="yt-thumb">▶</div>
+          <div class="yt-info"><h4>🦖 Dino Tried to Show Off… Then This Happened 😂 | Funny Dolph</h4><span>10:00 · Latest</span></div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=6Yryctxi5f0" class="yt-item" target="_blank" rel="noopener">
+          <div class="yt-thumb">▶</div>
+          <div class="yt-info"><h4>“Dino Turned INVISIBLE… Then Sparky Disappeared Too! 😱🦖⚡”</h4><span>10:00 · Latest</span></div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=GnB3lK9Dsw0" class="yt-item" target="_blank" rel="noopener">
+          <div class="yt-thumb">▶</div>
+          <div class="yt-info"><h4>“Dino Turned INVISIBLE… Then Sparky DISAPPEARED Too! 😱🦖⚡🍌”</h4><span>10:00 · Latest</span></div>
+        </a>
+        <a href="https://www.youtube.com/channel/UCxxxxxx" class="btn-primary" target="_blank" rel="noopener" style="margin-top:0.5rem;text-align:center">Subscribe to Channel →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD GENERATION -->
+<section class="section" id="newsletter">
+  <div class="lead-section">
+    <div class="lead-badge">FREE — FREE AI TOOLKIT</div>
+    <h2>Get the Ultimate AI Resource Pack</h2>
+    <p>Join 45,000+ AI enthusiasts receiving weekly insights, tools, and exclusive tutorials</p>
+    <div class="lead-form">
+      <input type="text" class="lead-input" id="leadName" placeholder="Your name" style="min-width:160px;flex:0.7">
+      <input type="email" class="lead-input" id="leadEmail" placeholder="your@email.com">
+      <button class="btn-primary" onclick="handleLead()">Download Free Toolkit</button>
+    </div>
+    <div class="form-success" id="leadSuccess">✓ Welcome to YoeAI! Check your inbox for your AI toolkit.</div>
+    <div class="lead-magnet">
+      <div class="magnet-item">
+        <div class="magnet-icon">📊</div>
+        <div><h4>AI Implementation Playbook</h4><p>50-page guide to deploying AI in your organization</p></div>
+      </div>
+      <div class="magnet-item">
+        <div class="magnet-icon">🛠️</div>
+        <div><h4>100+ AI Prompt Templates</h4><p>Ready-to-use prompts for every business scenario</p></div>
+      </div>
+      <div class="magnet-item">
+        <div class="magnet-icon">📈</div>
+        <div><h4>ROI Calculator Tool</h4><p>Measure your AI investment returns instantly</p></div>
+      </div>
+    </div>
+    <p style="font-size:0.72rem;color:var(--muted);margin-top:1.5rem;font-family:var(--mono)">No spam. Unsubscribe anytime. Your data is never sold.</p>
+  </div>
+</section>
+
+<!-- AFFILIATE TOOLS -->
+<section class="section" id="tools">
+  <div class="section-label">AI TOOLKIT</div>
+  <h2 class="section-title">Essential AI Tools & Platforms</h2>
+  <p class="section-sub">Curated selection of the most powerful AI tools for developers and businesses</p>
+  <div class="tools-grid">
+    <a href="https://openai.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🤖</div>
+      <div class="tool-info"><h4>OpenAI API</h4><p>Industry-leading language models for any application</p><div class="tool-commission">Free $5 credit</div></div>
+    </a>
+    <a href="https://midjourney.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🎨</div>
+      <div class="tool-info"><h4>Midjourney</h4><p>Generate stunning AI artwork and visuals instantly</p><div class="tool-commission">Basic plan $10/mo</div></div>
+    </a>
+    <a href="https://github.com/features/copilot" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">💻</div>
+      <div class="tool-info"><h4>GitHub Copilot</h4><p>AI pair programmer that accelerates coding 55%</p><div class="tool-commission">Free for students</div></div>
+    </a>
+    <a href="https://jasper.ai" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">📝</div>
+      <div class="tool-info"><h4>Jasper AI</h4><p>Enterprise content creation powered by AI</p><div class="tool-commission">7-day free trial</div></div>
+    </a>
+    <a href="https://elevenlabs.io" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🔊</div>
+      <div class="tool-info"><h4>ElevenLabs</h4><p>Ultra-realistic AI voice generation platform</p><div class="tool-commission">Free tier available</div></div>
+    </a>
+    <a href="https://runwayml.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🎬</div>
+      <div class="tool-info"><h4>Runway ML</h4><p>Professional AI video editing and generation</p><div class="tool-commission">125 credits free</div></div>
+    </a>
+  </div>
+</section>
+
+<!-- NETWORK BAR -->
+<div class="section" style="padding-top:0">
+  <div class="network-bar">
+    <div class="network-info">
+      <h3>Part of the Webworks Media Network</h3>
+      <p>1,000+ premium domains across 13 niches. Reach millions of targeted visitors.</p>
+    </div>
+    <div class="network-stats">
+      <div class="net-stat"><span class="n">1,000+</span><span class="l">Domains</span></div>
+      <div class="net-stat"><span class="n">13</span><span class="l">Niches</span></div>
+      <div class="net-stat"><span class="n">250K+</span><span class="l">Monthly Visitors</span></div>
+    </div>
+    <a href="mailto:network@yoeai.com" class="btn-primary" style="white-space:nowrap">Join Network →</a>
+  </div>
+</div>
+
+<!-- SPONSOR PACKAGES -->
+<section class="section" id="sponsors">
+  <div class="sponsor-section">
+    <div class="section-label">ADVERTISE</div>
+    <h2 class="section-title">Reach 45,000+ AI Professionals</h2>
+    <p class="section-sub">Reach engaged developers, tech leaders, and AI decision-makers actively seeking solutions</p>
+    <div class="sponsor-grid">
+      <div class="sponsor-card">
+        <div class="sponsor-tier">Starter</div>
+        <h4>Newsletter Mention</h4>
+        <div class="sponsor-price">$299 <span>/ issue</span></div>
+        <ul class="sponsor-features">
+          <li>One-line mention in weekly brief</li>
+          <li>Reaches 45K+ subscribers</li>
+          <li>Click tracking report</li>
+          <li>Guaranteed placement</li>
+        </ul>
+        <a href="mailto:sponsor@yoeai.com" class="btn-sponsor">Book Slot →</a>
+      </div>
+      <div class="sponsor-card featured">
+        <div class="featured-badge">MOST POPULAR</div>
+        <div class="sponsor-tier">Growth</div>
+        <h4>Featured Sponsor</h4>
+        <div class="sponsor-price">$999 <span>/ issue</span></div>
+        <ul class="sponsor-features">
+          <li>Full feature block + logo</li>
+          <li>Homepage billboard (1 week)</li>
+          <li>Social amplification</li>
+          <li>Dedicated send option</li>
+          <li>Analytics dashboard</li>
+        </ul>
+        <a href="mailto:sponsor@yoeai.com" class="btn-sponsor">Book Slot →</a>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-tier">Premium</div>
+        <h4>Exclusive Partner</h4>
+        <div class="sponsor-price">$2,999 <span>/ month</span></div>
+        <ul class="sponsor-features">
+          <li>All Growth benefits</li>
+          <li>4 newsletter placements</li>
+          <li>Dedicated content piece</li>
+          <li>Network-wide exposure</li>
+          <li>Monthly strategy call</li>
+        </ul>
+        <a href="mailto:sponsor@yoeai.com" class="btn-sponsor">Get Started →</a>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-tier">Network</div>
+        <h4>Network Buy</h4>
+        <div class="sponsor-price">$9,999 <span>/ month</span></div>
+        <ul class="sponsor-features">
+          <li>Across all 1,000+ domains</li>
+          <li>250K+ monthly impressions</li>
+          <li>13 niche categories</li>
+          <li>Custom targeting</li>
+          <li>Dedicated account manager</li>
+        </ul>
+        <a href="mailto:network@yoeai.com" class="btn-sponsor">Contact Us →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOMAIN ACQUISITION -->
+<section class="section" id="acquire">
+  <div class="domain-section">
+    <div class="domain-grid">
+      <div class="domain-info">
+        <div class="section-label">PREMIUM DOMAIN</div>
+        <h2>Own yoeai.com</h2>
+        <p>YoeAI.com is a premium 5-letter .com domain perfect for AI ventures. Short, memorable, and brandable with strong phonetic appeal for global markets.</p>
+        <div class="domain-price">$35,000</div>
+        <div class="domain-price-sub">or lease from $450/month · Financing available</div>
+        <div class="domain-actions">
+          <a href="mailto:domains@yoeai.com" class="btn-primary">Make an Offer</a>
+          <a href="mailto:domains@yoeai.com" class="btn-ghost">Inquire About Lease</a>
+        </div>
+        <div class="domain-features">
+          <div class="domain-feat">Category-defining premium domain name</div>
+          <div class="domain-feat">Built website included with purchase</div>
+          <div class="domain-feat">45K+ email subscriber list</div>
+          <div class="domain-feat">Social media handles available</div>
+          <div class="domain-feat">Immediate transfer via Escrow.com</div>
+        </div>
+      </div>
+      <div class="domain-stats">
+        <div class="domain-stat"><span class="num">4 yrs</span><span class="lbl">Domain Age</span></div>
+        <div class="domain-stat"><span class="num">5 chars</span><span class="lbl">Characters</span></div>
+        <div class="domain-stat"><span class="num">8K/mo</span><span class="lbl">Monthly Searches</span></div>
+        <div class="domain-stat"><span class="num">.com</span><span class="lbl">Extension</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- DISPLAY AD UNIT - Bottom of page -->
+<div style="max-width:1140px;margin:2rem auto;padding:0 2rem;position:relative;z-index:1;">
+  <ins class="adsbygoogle"
+       style="display:block;min-height:90px;"
+       data-ad-client="YOUR_PUBLISHER_ID"
+       data-ad-slot="YOUR_AD_SLOT_2"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- FOOTER -->
+<!-- ═══ PHASE 6: LEGAL FOOTER ═══ -->
+<footer>
+  <div class="footer-legal-bar">
+    <div class="footer-legal-inner">
+
+      <!-- Network Links -->
+      <div class="footer-network">
+        <span class="footer-network-label">Webworks Media Network</span>
+        <div class="footer-network-links">
+          <a href="https://b2b.marketing" target="_blank">B2B.Marketing</a>
+          <a href="https://agentic.press" target="_blank">Agentic.Press</a>
+          <a href="https://genai.work" target="_blank">GenAI.Work</a>
+          <a href="https://quantum.trading" target="_blank">Quantum.Trading</a>
+        </div>
+      </div>
+
+      <!-- Legal Links -->
+      <div class="footer-legal-links">
+        <a href="acquisition.html">Acquisition</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Use</a>
+        <a href="#dmca">DMCA</a>
+        <a href="mailto:legal@yoeai.com">Legal</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">yoeai.com</a>
+        <p>Empowering the next generation of artificial intelligence innovation.</p>
+      </div>
+      <div class="footer-col">
+        <h4>CONTENT</h4>
+        <ul>
+          <li><a href="#insights">Latest Insights</a></li>
+          <li><a href="#videos">Video Library</a></li>
+          <li><a href="#tools">Tool Reviews</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>BUSINESS</h4>
+        <ul>
+          <li><a href="#sponsors">Advertise</a></li>
+          <li><a href="#acquire">Buy Domain</a></li>
+          <li><a href="mailto:partner@yoeai.com">Partner With Us</a></li>
+          <li><a href="mailto:hello@yoeai.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>NETWORK</h4>
+        <ul>
+          <li><a href="#">About Network</a></li>
+          <li><a href="#">All Domains</a></li>
+          <li><a href="#">Media Kit</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 yoeai.com · Webworks Media Network · All rights reserved</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal Statements -->
+  <div class="footer-legal-statements">
+    <p class="footer-copyright">
+      © 2026 YoeAI Platform (yoeai.com) · All rights reserved · ™ Trademark of Webworks Media Network
+    </p>
+    <p class="footer-disclaimer">
+      <strong>Affiliate Disclosure:</strong> This site contains affiliate links. We may earn a commission when you purchase through our links, at no extra cost to you. All recommendations are based on genuine assessment.
+    </p>
+    <p class="footer-disclaimer">
+      <strong>User Content Disclaimer:</strong> User-submitted content on YoeAI Platform does not necessarily reflect the views of yoeai.com or Webworks Media Network. We reserve the right to remove content that violates our community standards.
+    </p>
+    <p class="footer-disclaimer">
+      <strong>Privacy Statement:</strong> We collect only the information you provide voluntarily (email, name). We never sell, share, or rent your personal information to third parties. Your data is stored securely and used only to deliver the content you requested. You may unsubscribe at any time.
+    </p>
+    <p class="footer-disclaimer">
+      <strong>Copyright & DMCA:</strong> All original content on yoeai.com is protected by copyright. To report copyright infringement, contact <a href="mailto:dmca@yoeai.com">dmca@yoeai.com</a>. We respond to all valid DMCA notices within 48 hours.
+    </p>
+    <p class="footer-disclaimer">
+      <strong>General Disclaimer:</strong> Content on YoeAI Platform is for informational purposes only and does not constitute financial, legal, or professional advice. Always consult a qualified professional before making any decisions based on information found on this site.
+    </p>
+  </div>
+
+<style>
+.footer-legal-bar{background:#020408;border-top:1px solid rgba(255,255,255,0.07);padding:2rem}
+.footer-legal-inner{max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.footer-network-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:2px;color:#6b7a99;text-transform:uppercase;display:block;margin-bottom:0.5rem}
+.footer-network-links{display:flex;gap:1rem;flex-wrap:wrap}
+.footer-network-links a{font-size:0.78rem;color:#6b7a99;text-decoration:none;transition:color 0.2s}
+.footer-network-links a:hover{color:#00f5c4}
+.footer-legal-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.footer-legal-links a{font-size:0.75rem;color:#6b7a99;text-decoration:none;transition:color 0.2s}
+.footer-legal-links a:hover{color:#e8ecf8}
+.footer-legal-statements{background:#010306;padding:2rem;text-align:center;border-top:1px solid rgba(255,255,255,0.04)}
+.footer-copyright{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:#4a5568;margin-bottom:1rem}
+.footer-disclaimer{font-size:0.72rem;color:#3a4555;line-height:1.6;margin-bottom:0.75rem;max-width:900px;margin-left:auto;margin-right:auto}
+.footer-disclaimer strong{color:#4a5568}
+.footer-disclaimer a{color:#6b7a99;text-decoration:none}
+.footer-disclaimer a:hover{color:#00f5c4}
+@media(max-width:768px){.footer-legal-inner{flex-direction:column;align-items:flex-start}}
+</style>
+</footer>
+
+<script>
+// Lead capture
+function handleLead() {
+  const name = document.getElementById('leadName').value.trim();
+  const email = document.getElementById('leadEmail').value.trim();
+  if (!name) { document.getElementById('leadName').style.borderColor = '#ef4444'; return; }
+  if (!email || !email.includes('@')) { document.getElementById('leadEmail').style.borderColor = '#ef4444'; return; }
+  // Send to your CRM/email system here
+  document.querySelector('.lead-form').style.display = 'none';
+  document.getElementById('leadSuccess').style.display = 'block';
+  // Track conversion
+  if (typeof gtag !== 'undefined') gtag('event', 'lead_capture', { domain: 'yoeai.com', niche: 'ai-tech' });
+}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').style.borderBottomColor = window.scrollY > 50 ? 'rgba(0,245,196,0.15)' : 'rgba(255,255,255,0.06)';
+});
+
+// Enter key for lead form
+document.addEventListener('keypress', e => {
+  if (e.key === 'Enter') handleLead();
+});
+</script>
+
+<!-- STICKY SIDEBAR AD (desktop only) -->
+<div style="position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:50;display:none;" id="stickyAd">
+  <ins class="adsbygoogle"
+       style="display:block;width:160px;height:600px;"
+       data-ad-client="YOUR_PUBLISHER_ID"
+       data-ad-slot="YOUR_AD_SLOT_3"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<script>
+  // Show sticky ad only on wide screens
+  if(window.innerWidth > 1400) document.getElementById('stickyAd').style.display = 'block';
+</script>
+
+<!-- ═══ PHASE 8: FLOATING FEEDBACK BUTTON ═══ -->
+<div class="feedback-float" id="feedbackFloat">
+  <button class="feedback-btn" onclick="document.getElementById('feedbackModal').style.display='flex'" title="Send Feedback">
+    💬
+  </button>
+  <span class="feedback-label">Feedback</span>
+</div>
+
+<div class="feedback-modal" id="feedbackModal" style="display:none" onclick="if(event.target===this)this.style.display='none'">
+  <div class="feedback-modal-inner">
+    <button class="feedback-close" onclick="document.getElementById('feedbackModal').style.display='none'">✕</button>
+    <h3>Send Feedback</h3>
+    <p>Help us improve YoeAI Platform. All feedback goes directly to our team.</p>
+    <form action="https://formspree.io/f/xvzdyoqr" method="POST" onsubmit="document.getElementById('feedbackModal').style.display='none'">
+      <input type="hidden" name="_subject" value="Feedback: yoeai.com">
+      <input type="hidden" name="type" value="Site Feedback">
+      <select name="feedback_type" style="width:100%;padding:0.6rem;margin-bottom:0.75rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:6px;color:#e8ecf8;font-size:0.85rem">
+        <option value="bug">🐛 Report a Bug</option>
+        <option value="suggestion">💡 Suggest Enhancement</option>
+        <option value="content">📝 Content Issue</option>
+        <option value="other">💬 General Feedback</option>
+      </select>
+      <textarea name="message" placeholder="Your feedback..." required style="width:100%;padding:0.75rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:6px;color:#e8ecf8;font-size:0.85rem;min-height:100px;resize:vertical;font-family:inherit"></textarea>
+      <input type="email" name="email" placeholder="Your email (optional)" style="width:100%;padding:0.6rem;margin-top:0.5rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:6px;color:#e8ecf8;font-size:0.85rem">
+      <button type="submit" style="width:100%;margin-top:0.75rem;padding:0.75rem;background:linear-gradient(135deg,#00f5c4,#00c9a0);color:#000;border:none;border-radius:8px;font-weight:800;font-family:'Syne',sans-serif;cursor:pointer;font-size:0.9rem">Send Feedback</button>
+    </form>
+  </div>
+</div>
+
+<style>
+.feedback-float{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;flex-direction:column;align-items:center;gap:4px}
+.feedback-btn{width:48px;height:48px;background:linear-gradient(135deg,#1a2a4a,#2a3a5a);border:1px solid rgba(0,245,196,0.3);border-radius:50%;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.4);transition:transform 0.2s,box-shadow 0.2s}
+.feedback-btn:hover{transform:scale(1.1);box-shadow:0 4px 30px rgba(0,245,196,0.3)}
+.feedback-label{font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:#6b7a99;letter-spacing:1px;text-transform:uppercase}
+.feedback-modal{position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:1000;display:flex;align-items:center;justify-content:center;padding:1rem}
+.feedback-modal-inner{background:#0c1428;border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:2rem;width:100%;max-width:420px;position:relative}
+.feedback-close{position:absolute;top:1rem;right:1rem;background:none;border:none;color:#6b7a99;font-size:1.1rem;cursor:pointer;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:background 0.2s}
+.feedback-close:hover{background:rgba(255,255,255,0.1)}
+.feedback-modal-inner h3{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:800;color:#e8ecf8;margin-bottom:0.5rem}
+.feedback-modal-inner p{font-size:0.82rem;color:#6b7a99;margin-bottom:1rem}
+</style>
+
+</body>
+</html>
